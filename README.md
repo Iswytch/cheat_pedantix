@@ -6,12 +6,14 @@ Source de liste de mots : https://eduscol.education.fr/186/liste-de-frequence-le
 Copier coller le texte du pdf dans un  fichier txt "dictionnaire"
 
 Enlever tout après le premier espace de chaque ligne :
-
+```shell
 sed 's/\s.*$//' dictionnaire >> wordsRetourLigne
-
+```
 
 Ajouter une virgule à la fin de chaque ligne :
+```shell
 sed '$!s/$/,/' wordsRetourLigne >> wordsRetourLigneVirgule
+```
 
 Copier coller le texte sur google pour supprimer tout les retour de ligne
 
@@ -21,7 +23,9 @@ Sous la console JS de la page :
 
 wordsToCut = Notre liste de mot à coller ici
 
+```javascript
 words = wordsToCut.split(",")
+```
 
 ```javascript
 btn = document.getElementById("pedantix-guess-btn")
